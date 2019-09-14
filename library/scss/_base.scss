@@ -1,0 +1,856 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Base Mobile Stylesheet
+
+Be light and don't over style since everything here will be
+loaded by mobile devices. You want to keep it as minimal as
+possible. This is called at the top of the main stylsheet
+and will be used across all viewports.
+
+******************************************************************/
+
+/*********************
+GENERAL STYLES
+*********************/
+
+body {
+	font-family: $serif;
+	font-size: 100%;
+	line-height: 1.5;
+	color: #565656;
+	background-image:url(../images/bg-notebook-paper-mobile.jpg);
+	background-repeat:repeat-y;
+	background-size:contain;
+	background-position:top center;
+}
+
+#header.hero {
+	background-image: url(../images/iheartsingularthey-logo.gif);
+	background-size:contain;
+	background-position:center center;
+	background-repeat:no-repeat;
+
+	#logo {
+		h1 {
+			text-indent:-9999px;
+			margin:0;
+		}
+		text-align:center;
+
+		img {
+			width:80%;
+			max-width:350px;
+			height:auto;
+			margin:10% auto;
+		}
+	}
+}
+
+#introAside h2 {
+	position:absolute;
+	z-index:999;
+	bottom:0;
+	right:0;
+	margin:0;
+	color:$pink;
+	font-size:20px;
+	line-height:1;
+	text-align:center;
+	padding:5px;
+
+	a {
+		background:$pink;color:#fff; display:inline-block; padding:7px;border-radius:40px;width:42px;
+		
+		&:hover {
+			background:lighten($pink,5%); border-radius:19px;
+		}
+	}
+}
+
+.poem {
+	position:relative;
+	margin:0 auto;
+	font-size:40px;
+
+	p {
+		font-family:$serif;
+		text-align:center;
+		letter-spacing:.03em;
+		color:#fff;
+		font-size:16px;
+		max-width:98%;
+		line-height:1.8;
+		margin:-40px auto 0;
+		padding:8%;
+		position:relative;
+		z-index:9999;
+
+		span {
+			text-decoration:underline; 
+		}
+
+		.bigfoot-footnote__content p {
+			background:none !important;
+			color:#000 !important;
+			padding:0;
+			margin:0;
+			line-height:1.4;
+			font-size:18px;
+		}
+	}
+}
+
+
+.doodle {
+	background-image:url(../images/bg-notebook-paper.jpg);
+	background-size:cover;
+	background-position:center center;
+	background-repeat:no-repeat;
+	width:100%;
+	text-align:center;
+	position:relative;
+
+	img{
+		max-width:80%;
+		width:700px;
+		height:auto;
+		margin:40px auto;
+	}
+}
+
+#Neutral.doodle {
+	background-image:none !important;
+}
+
+#itsNeutral {
+	background-color:darken($blue, 5%);
+
+	p {background:$blue;}
+}
+
+#itsEasy {
+	background:darken($yellow, 5%);
+
+	p {background:$yellow;}
+}
+
+#itsInclusive {
+	background:darken($orange, 5%);
+
+	p {background:$orange;}
+}
+
+#itsClassy {
+	background:darken($purple, 5%);
+
+	p {background:$purple;}
+}
+
+
+#callToAction {
+	background-image:url(../images/bg-notebook-paper-mobile.jpg);
+	background-size:cover;
+	background-position:bottom left;
+	background-repeat:repeat-y;
+	width:100%;
+	text-align:center;
+	position:relative;
+	padding:80px auto;
+
+	#callToActionPoem {
+		color:$pink;
+		max-width:94%;
+		margin:0 auto;
+
+		p {
+			font-family:$serif;
+			text-align:center;
+			letter-spacing:.03em;
+			color:$pink;
+			font-size:18px;
+			max-width:98%;
+			line-height:1.6;
+			padding:8%;
+			position:relative;
+			z-index:9999;
+
+			span {
+				text-decoration:underline; 
+			}
+
+			.bigfoot-footnote__content p {
+				background:none !important;
+				color:#000 !important;
+				padding:0;
+				margin:0;
+				line-height:1.4;
+				font-size:18px;
+			}
+		}
+	}
+}
+
+#socialContainer {
+	text-align:center;
+	margin:40px auto 250px;
+
+	#shareThis {
+		
+		font-family:$theme-font;
+		line-height:1;
+		padding:0 10px;
+
+		.shareLabel {
+			line-height:100px;
+			font-size:50px;
+			margin:15px 0 0;
+			display:inline-block;
+			color:$pink;
+		}
+
+		.shareButton {
+			display:inline-block;
+			line-height:100px;
+			padding:0;
+			margin:0 15px;
+
+			a {
+				height:100px;
+				width:100px;
+				text-indent:-9999px;
+				display:inline-block;
+
+				&#facebook {background:url(../images/social-facebook.gif) no-repeat;}
+				&#twitter {background:url(../images/social-twitter.gif) no-repeat;}
+			}
+
+		}
+
+		.st_fblike_hcount {
+			background:url(../images/social-heart.gif) no-repeat;
+			background-size:contain;
+			line-height:1.6;
+			padding:25px;
+			display:inline-block;
+			margin:0 20px;
+			border-radius:6px;
+		}
+
+		.sixcol {
+			margin-bottom:20px;
+			display:block;
+		}
+	}	
+}
+
+.footnotes {
+	ol {
+		text-align:left;
+		list-style: decimal;
+		font-size:1.2em;
+
+		&:before {
+			content:'Notes:';
+			font-family:$theme-font;
+			color:$pink;
+		}
+
+		li {
+			margin:10px auto 20px;
+			padding:20px;
+			background:rgba(255,255,255,.8);
+			border-radius:30px;
+		}
+	}
+}
+
+
+/*********************
+LAYOUT & GRID STYLES
+*********************/
+
+.wrap {
+	width: 96%;
+	margin: 0 auto;
+}
+
+.mobileHide {
+	display:none;
+}
+
+/*********************
+LINK STYLES
+*********************/
+
+a, a:visited {
+	color: $link-color;
+
+	/* on hover */
+	&:hover, &:focus {
+		color: $link-hover;
+	}
+
+	/* on click */
+	&:active {
+
+	}
+
+	/* mobile tap color */
+	&:link {
+		/*
+		this highlights links on iPhones/iPads.
+		so it basically works like the :hover selector
+		for mobile devices.
+		*/
+		-webkit-tap-highlight-color : rgba( 0, 0, 0, 0.3 );
+	}
+}
+
+/******************************************************************
+H1, H2, H3, H4, H5 STYLES
+******************************************************************/
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
+	font-family: $theme-font;
+	text-rendering: optimizelegibility;
+	font-weight: 400;
+	text-transform:uppercase;
+	/*
+	if you're going to use webfonts, be sure to check your weights
+	http://css-tricks.com/watch-your-font-weight/
+	*/
+
+	/* removing text decoration from all headline links */
+	a {
+		text-decoration: none;
+	}
+}
+
+h1, .h1 {
+	font-size: 2.5em;
+	line-height: 1.333em;
+}
+
+h2, .h2 {
+	font-size: 1.75em;
+	line-height: 1.4em;
+	margin-bottom: 0.375em;
+}
+
+h3, .h3 {
+	font-size: 1.125em;
+}
+
+h4, .h4 {
+	font-size: 1.1em;
+}
+
+h5, .h5 {
+	font-size: 0.846em;
+	line-height: 2.09em;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+/*********************
+HEADER STYLES
+*********************/
+
+.header {}
+
+	#logo {}
+
+/*********************
+NAVIGATION STYLES
+*********************/
+
+/*
+all navs have a .nav class applied via
+the wp_menu function; this is so we can
+easily write one group of styles for
+the navs on the site so our css is cleaner
+and more scalable.
+*/
+
+.nav {
+	border: 1px solid #ccc;
+	border-bottom: 0;
+
+	li {
+
+		a {
+			display: block;
+			text-decoration: none;
+			padding: 10px 10px;
+			background-color: #eee;
+			border-bottom: 1px solid #ccc;
+
+			/*
+			remember this is for mobile ONLY, so there's no need
+			to even declare hover styles here, you can do it in
+			the style.scss file where it's relevant. We want to
+			keep this file as small as possible!
+			*/
+			&:hover, &:focus {
+
+			}
+		}
+
+		&:first-child {}
+
+		&:last-child {}
+
+		/*
+		so you really have to rethink your dropdowns for mobile.
+		you don't want to have it expand too much because the
+		screen is so small. How you manage your menu should
+		depend on the project. Here's some great info on it:
+		http://www.alistapart.com/articles/organizing-mobile/
+		*/
+		ul.sub-menu,
+		ul.children {
+
+			li {
+
+				a {
+					padding-left: 30px;
+
+					&:hover,
+					&:focus {}
+
+					&:link {}
+
+				}
+
+				&:first-child {}
+
+				&:last-child {}
+
+			}
+
+		}
+
+	} /* end .menu li */
+
+	/* highlight current page */
+	li.current-menu-item,
+	li.current_page_item,
+	li.current-page-ancestor {
+
+		a {}
+
+	}  /* end current highlighters */
+
+} /* end .nav */
+
+
+/*********************
+POSTS & CONTENT STYLES
+*********************/
+
+#content {
+	margin-top: 2.2em;
+}
+
+		.hentry {
+
+			header {}
+
+			footer {}
+
+		} /* end .hentry */
+
+		/* entry content */
+		.entry-content {
+
+			p {}
+
+
+			ul, ol, table, dl {}
+
+			ul, ol {
+
+				li {}
+
+			}
+
+			ul {
+
+				li {}
+
+			}
+
+			ol {
+
+				li {}
+
+			}
+
+			blockquote {
+
+				&:before {}
+
+			}
+
+			dl {}
+
+			dt {}
+
+			dd {
+				margin-left: 0;
+				font-size: 0.9em;
+				color: #787878;
+				margin-bottom: 1.5em;
+			}
+
+			img {
+				margin: 0 0 1.5em 0;
+				max-width: 100%;
+				height: auto;
+			}
+
+			/*
+			image alignment on a screen this size may be
+			a bit difficult. It's set to start aligning
+			and floating images at the next breakpoint,
+			but it's up to you. Feel free to change it up.
+			*/
+			.alignleft, img.alignleft {}
+			.alignright, img.alignright {}
+			.aligncenter, img.aligncenter {}
+
+			video, object {
+				max-width: 100%;
+				height: auto;
+			}
+
+			pre {
+				background: #eee;
+				border: 1px solid #cecece;
+				padding: 10px;
+			}
+
+		} /* end .entry-content */
+
+
+/*********************
+FOOTER STYLES
+*********************/
+
+#footer {
+	clear: both;
+	background-image:url(../images/bg-notebook-paper.jpg);
+	background-size:cover;
+	padding:100px;
+	background-position:bottom center;
+	background-repeat:no-repeat;
+}
+
+	/*
+	if you checked out the link above:
+	http://www.alistapart.com/articles/organizing-mobile/
+	you'll want to style the footer nav
+	a bit more in-depth. Remember to keep
+	it simple because you'll have to
+	override these styles for the desktop
+	view.
+	*/
+	.footer-links {
+
+		ul {
+
+			li {}
+
+		}
+
+	} /* end .footer-links */
+
+
+	.copyright {}
+
+
+/*********************
+BIGFOOT FOOTNOTE STYLES
+*********************/
+.bigfoot-footnote__button {
+  position: relative;
+  z-index: 5;
+  top: -0.1em;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  display: inline-block;
+  padding: 0.35em;
+  margin: 0 0.1em 0 0.2em;
+  border: none;
+  border-radius: 0.3em;
+  cursor: pointer;
+  background-color: rgba(255,255,255,.6);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  font-size: 1rem;
+  font-weight:bold;
+  line-height: 0;
+  vertical-align: super;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -webkit-transition-property: background-color;
+          transition-property: background-color;
+  -webkit-transition-duration: 0.25s;
+          transition-duration: 0.25s;
+}
+.bigfoot-footnote__button:hover, .bigfoot-footnote__button:focus {
+  outline: none;
+  background-color: rgba(0,0,0,.5);
+}
+.bigfoot-footnote__button:active {
+  background-color: rgba(0,0,0,.7);
+}
+.bigfoot-footnote__button.is-active {
+  background-color: #6e6e6e;
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+}
+.bigfoot-footnote__button:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.bigfoot-footnote__button__circle {
+  display: inline-block;
+  width: 0.25em;
+  height: 0.25em;
+  margin-right: 0.25em;
+  float: left;
+}
+.bigfoot-footnote__button__circle:last-child {
+  margin-right: 0;
+}
+
+.bigfoot-footnote__container {
+  display: inline-block;
+  position: relative;
+  text-indent: 0;
+}
+
+@media not print {
+  .footnote-print-only {
+    display: none !important;
+  }
+}
+@media print {
+  .bigfoot-footnote,
+  .bigfoot-footnote__button {
+    display: none !important;
+  }
+}
+.bigfoot-footnote {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  box-sizing: border-box;
+  max-width: 90%;
+  margin: 1.96924em 0;
+  background: #fafafa;
+  opacity: 0;
+  border-radius: 0.5em;
+  border: 1px solid #c3c3c3;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  line-height: 0;
+  -webkit-transition-property: opacity, -webkit-transform;
+          transition-property: opacity, transform;
+  -webkit-transition-duration: 0.25s;
+          transition-duration: 0.25s;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
+  -webkit-transform: scale(0.1) translateZ(0);
+          transform: scale(0.1) translateZ(0);
+  -webkit-transform-origin: 50% 0;
+      -ms-transform-origin: 50% 0;
+          transform-origin: 50% 0;
+}
+.bigfoot-footnote.is-positioned-top {
+  top: auto;
+  bottom: 0;
+}
+.bigfoot-footnote.is-active {
+  -webkit-transform: scale(1) translateZ(0);
+          transform: scale(1) translateZ(0);
+  opacity: 0.97;
+}
+.bigfoot-footnote.is-bottom-fixed {
+  position: fixed;
+  bottom: 0;
+  top: auto;
+  left: 0;
+  right: auto;
+  -webkit-transform: translateY(100%);
+      -ms-transform: translateY(100%);
+          transform: translateY(100%);
+  width: 100%;
+  margin: 0;
+  border-radius: 0;
+  opacity: 1;
+  border-width: 1px 0 0;
+  -webkit-transition: -webkit-transform 0.3s ease;
+          transition: transform 0.3s ease;
+}
+.bigfoot-footnote.is-bottom-fixed.is-active {
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
+}
+.bigfoot-footnote.is-bottom-fixed .bigfoot-footnote__wrapper {
+  margin: 0 0 0 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  max-width: 100%;
+}
+.bigfoot-footnote.is-bottom-fixed .bigfoot-footnote__wrapper,
+.bigfoot-footnote.is-bottom-fixed .bigfoot-footnote__content {
+  border-radius: 0;
+}
+.bigfoot-footnote.is-bottom-fixed .bigfoot-footnote__tooltip {
+  display: none;
+}
+.bigfoot-footnote.is-scrollable:after {
+  content: '';
+  position: absolute;
+  bottom: 0.3375em;
+  left: 0.3375em;
+  z-index: 14;
+  display: block;
+  height: 0.78125em;
+  width: 0.625em;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTJweCIgaGVpZ2h0PSIxNXB4IiB2aWV3Qm94PSIwIDAgMTIgMTUiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgcHJlc2VydmVBc3BlY3RSYXRpbz0ieE1pbllNaW4iPgogICAgPGcgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGcgaWQ9IkFycm93IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxLjAwMDAwMCwgMS4wMDAwMDApIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJzcXVhcmUiPgogICAgICAgICAgICA8cGF0aCBkPSJNNSwwIEw1LDExLjUiIGlkPSJMaW5lIj48L3BhdGg+CiAgICAgICAgICAgIDxwYXRoIGQ9Ik0wLjUsNy41IEw1LjAyNzY5Mjc5LDEyLjAyNzY5MjgiIGlkPSJMaW5lIj48L3BhdGg+CiAgICAgICAgICAgIDxwYXRoIGQ9Ik00LjUsNy41IEw5LjAyNzY5Mjc5LDEyLjAyNzY5MjgiIGlkPSJMaW5lLTIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDcuMDAwMDAwLCAxMC4wMDAwMDApIHNjYWxlKC0xLCAxKSB0cmFuc2xhdGUoLTcuMDAwMDAwLCAtMTAuMDAwMDAwKSAiPjwvcGF0aD4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPgo=");
+  background-size: cover;
+  opacity: 0.1;
+  transition-properties: opacity;
+  -webkit-transition-duration: 0.25s;
+          transition-duration: 0.25s;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
+}
+.bigfoot-footnote.is-scrollable .bigfoot-footnote__wrapper:before, .bigfoot-footnote.is-scrollable .bigfoot-footnote__wrapper:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  z-index: 12;
+  left: 0;
+}
+.bigfoot-footnote.is-scrollable .bigfoot-footnote__wrapper:before {
+  top: -1px;
+  height: 1.1em;
+  border-radius: 0.5em 0.5em 0 0;
+  background-image: -webkit-linear-gradient(top, #fafafa 50%, rgba(250, 250, 250, 0) 100%);
+  background-image: linear-gradient(to bottom, #fafafa 50%, rgba(250, 250, 250, 0) 100%);
+}
+.bigfoot-footnote.is-scrollable .bigfoot-footnote__wrapper:after {
+  bottom: -1px;
+  height: 1.2em;
+  border-radius: 0 0 0.5em 0.5em;
+  background-image: -webkit-linear-gradient(bottom, #fafafa 50%, rgba(250, 250, 250, 0) 100%);
+  background-image: linear-gradient(to top, #fafafa 50%, rgba(250, 250, 250, 0) 100%);
+}
+.bigfoot-footnote.is-scrollable ::-webkit-scrollbar {
+  display: none;
+}
+.bigfoot-footnote.is-fully-scrolled:after, .bigfoot-footnote.is-fully-scrolled:before {
+  opacity: 0;
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
+}
+
+.bigfoot-footnote__wrapper {
+  position: relative;
+  z-index: 14;
+  width: 22em;
+  display: inline-block;
+  box-sizing: inherit;
+  overflow: hidden;
+  margin: 0;
+  background-color: #fafafa;
+  border-radius: 0.5em;
+  line-height: 0;
+}
+
+.bigfoot-footnote__content {
+  position: relative;
+  z-index: 8;
+  display: inline-block;
+  max-height: 15em;
+  padding: 1.1em 1.3em 1.2em;
+  box-sizing: inherit;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  background: #fafafa;
+  border-radius: 0.5em;
+  -webkit-font-smoothing: subpixel-antialiased;
+  line-height: normal;
+}
+.bigfoot-footnote__content img {
+  max-width: 100%;
+}
+.bigfoot-footnote__content *:last-child {
+  margin-bottom: 0 !important;
+}
+.bigfoot-footnote__content *:first-child {
+  margin-top: 0 !important;
+}
+
+.bigfoot-footnote__tooltip {
+  position: absolute;
+  z-index: 12;
+  box-sizing: border-box;
+  margin-left: -0.65em;
+  width: 1.3em;
+  height: 1.3em;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  background: #fafafa;
+  border: 1px solid #c3c3c3;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  border-top-left-radius: 0;
+}
+.is-positioned-bottom .bigfoot-footnote__tooltip {
+  top: -0.65em;
+}
+.is-positioned-top .bigfoot-footnote__tooltip {
+  bottom: -0.65em;
+}
+
+.bigfoot-footnote__button {
+  position: relative;
+  height: 1.05em;
+  width: 1.2em;
+  border-radius: 0.475em;
+}
+.bigfoot-footnote__button:after {
+  content: attr(data-footnote-number);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: block;
+  font-size: 0.57em;
+  font-weight: bold;
+  color: rgba(0,0,0,.9);
+  -webkit-transition: color 0.25s ease;
+          transition: color 0.25s ease;
+}
+.bigfoot-footnote__button:hover:after, .bigfoot-footnote__button.is-active:after {
+  color: white;
+}
+
+.bigfoot-footnote__button__circle {
+  display: none;
+}
+

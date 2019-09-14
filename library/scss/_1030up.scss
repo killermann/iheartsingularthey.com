@@ -1,0 +1,49 @@
+/******************************************************************
+Site Name: 
+Author: 
+
+Stylesheet: Desktop Stylsheet
+
+This is the desktop size. It's larger than an iPad so it will only
+be seen on the Desktop. 
+
+******************************************************************/
+
+body, #callToAction{
+    background-image:url(../images/bg-notebook-paper.jpg);
+}
+
+#callToAction {
+    background-size:cover;
+    background-position:bottom left;
+}
+
+#introAside h2 {
+    font-size:28px;
+    letter-spacing:1px;
+    padding:10px;
+    line-height:1.3;
+}
+
+.poem:before {
+	content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.2;
+	background-repeat:no-repeat;
+	background-size:contain;
+	background-position:115% center;
+}
+
+#itsNeutral:before {background-image:url(../images/ihst-neutral.gif);}
+
+#itsInclusive:before {background-image:url(../images/ihst-inclusive.gif);}
+
+#itsEasy:before {background-image:url(../images/ihst-easy.gif);background-position:-15% center;}
+
+#itsClassy:before {background-image:url(../images/ihst-classy.gif);background-position:-15% center;}
