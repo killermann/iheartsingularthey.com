@@ -849,6 +849,7 @@ body {
   background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;
+  height: 100vh;
 }
 /* line 35, ../scss/_base.scss */
 #header.hero #logo {
