@@ -47,11 +47,11 @@ $alert-blue:        #d5edf8;
 
 $black:             #000;
 $white:             #fff;
-$pink:				#ed145b;
-$blue:				#2c62db;
-$orange:			#d66f35;
-$yellow:			#f7bc17;
-$purple:			#8328d6;
+$pink:				#ca0043;
+$blue:				#83b5ff;
+$orange:			#ffb582;
+$yellow:			#ffe17c;
+$purple:			#c77eff;
 
 $bones-pink:        #f01d4f;
 $bones-blue:        #1990db;
@@ -70,10 +70,8 @@ http://sachagreif.com/sass-color-variables/
 TYPOGRAPHY
 *********************/
 
-@import url(https://fonts.googleapis.com/css?family=Amatic+SC:700|Handlee);
-
 $sans-serif:        "Helvetica Neue", Helvetica, Arial, sans-serif;
-$serif:             "Handlee", Cambria, Times New Roman, Times, serif;
+$serif:             "Patrick Hand", "Bookman Old Style", "Serifa BT", "URW Bookman L", "itc bookman", times, serif;
 $theme-font: 		"Amatic SC", $serif;
 
 

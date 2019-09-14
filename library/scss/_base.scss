@@ -31,6 +31,7 @@ body {
 	background-size:contain;
 	background-position:center center;
 	background-repeat:no-repeat;
+	height: 100vh;
 
 	#logo {
 		h1 {
@@ -78,14 +79,14 @@ body {
 		font-family:$serif;
 		text-align:center;
 		letter-spacing:.03em;
-		color:#fff;
+		color:#000;
 		font-size:16px;
 		max-width:98%;
 		line-height:1.8;
 		margin:-40px auto 0;
 		padding:8%;
 		position:relative;
-		z-index:9999;
+		z-index:10;
 
 		span {
 			text-decoration:underline; 
